@@ -1,0 +1,121 @@
+married_direct(andy, elva).
+married_direct(jay, zoe).
+married_direct(jim, mag).
+married_direct(roy, nina).
+married_direct(stan, lora).
+married_direct(tony, coco).
+married_direct(phil, sara).
+married_direct(vito, ada).
+married_direct(toby, bess).
+married_direct(mike, jil).
+married_direct(tom, kim).
+married_direct(nick, gina).
+
+married(X, Y) :- married_direct(X, Y).
+married(X, Y) :- married_direct(Y, X).
+
+child_of(lora, andy).
+child_of(lora, elva).
+child_of(tess, andy).
+child_of(tess, elva).
+child_of(sam, andy).
+child_of(sam, elva).
+child_of(tony, andy).
+child_of(tony, elva).
+
+child_of(coco, jay).
+child_of(coco, zoe).
+child_of(paul, jay).
+child_of(paul, zoe).
+child_of(mark, jay).
+child_of(mark, zoe).
+child_of(may, jay).
+child_of(may, zoe).
+
+child_of(phil, jim).
+child_of(phil, mag).
+child_of(rita, jim).
+child_of(rita, mag).
+child_of(vito, jim).
+child_of(vito, mag).
+
+child_of(ada, jim).
+child_of(ada, mag).
+child_of(ryan, roy).
+child_of(ryan, nina).
+child_of(lisa, roy).
+child_of(lisa, nina).
+child_of(toby, roy).
+child_of(toby, nina).
+
+child_of(jill, stan).
+child_of(jill, lora).
+child_of(liz, tony).
+child_of(liz, coco).
+child_of(peter, tony).
+child_of(peter, coco).
+child_of(tim, tony).
+child_of(tim, coco).
+child_of(tom, phil).
+child_of(tom, sara).
+
+child_of(kim, phil).
+child_of(kim, sara).
+child_of(dale, vito).
+child_of(dale, ada).
+child_of(ken, vito).
+child_of(ken, ada).
+child_of(nick, vito).
+child_of(nick, ada).
+
+child_of(anna, tom).
+child_of(anna, kim).
+child_of(amy, tom).
+child_of(amy, kim).
+child_of(nick, tom).
+child_of(nick, kim).
+child_of(max, tom).
+child_of(max, kim).
+
+male(andy).
+male(jay).
+male(jim).
+male(roy).
+male(stan).
+male(tony).
+male(phil).
+male(vito).
+male(toby).
+male(mike).
+male(tom).
+male(nick).
+male(paul).
+male(mark).
+male(ryan).
+male(peter).
+male(tim).
+male(dale).
+male(ken).
+male(max).
+
+female(elva).
+female(zoe).
+female(mag).
+female(nina).
+female(lora).
+female(coco).
+female(sara).
+female(ada).
+female(bess).
+female(jil).
+female(kim).
+female(gina).
+female(tess).
+female(sam).
+female(may).
+female(rita).
+female(lisa).
+female(jill).
+female(liz).
+female(anna).
+female(amy).
