@@ -257,7 +257,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin"/>
-                <owl:hasValue rdf:resource="http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX"/>
+                <owl:hasValue rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Taiwan"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Golden Stinky Tofu Pizza</rdfs:label>
@@ -2898,7 +2898,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     
 
 
-    <!-- http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX -->
+	<!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Taiwan -->
 
     <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Taiwan">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
