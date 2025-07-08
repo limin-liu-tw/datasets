@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.co-ode.org/ontologies/pizza#"
-     xml:base="http://www.co-ode.org/ontologies/pizza"
+<rdf:RDF xmlns="http://www.semanticweb.org/shu/ontologies/2025/6/untitled-ontology-32#"
+     xml:base="http://www.semanticweb.org/shu/ontologies/2025/6/untitled-ontology-32"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -13,8 +13,7 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="http://www.co-ode.org/ontologies/pizza">
-        <owl:versionIRI rdf:resource="http://www.co-ode.org/ontologies/pizza/2.0.0"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/shu/ontologies/2025/6/untitled-ontology-32">
         <dc:description xml:lang="en">An ontology about pizzas and their toppings.
 
 This is an example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial).</dc:description>
@@ -235,6 +234,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://webprotege.stanford.edu/RCDdxr8iTySUBlT1hYohS9C -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RCDdxr8iTySUBlT1hYohS9C">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -257,7 +257,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin"/>
-                <owl:hasValue rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Taiwan"/>
+                <owl:hasValue rdf:resource="http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Golden Stinky Tofu Pizza</rdfs:label>
@@ -277,6 +277,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#American -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#American">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -328,7 +331,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#AmericanHot">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -438,7 +446,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Cajun">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -505,6 +518,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#CajunSpiceTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
@@ -539,6 +553,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Capricciosa">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -612,7 +629,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Caprina">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -665,6 +686,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
         <rdfs:label xml:lang="en">CheeseTopping</rdfs:label>
         <rdfs:label xml:lang="pt">CoberturaDeQueijo</rdfs:label>
         <skos:prefLabel xml:lang="en">Cheese</skos:prefLabel>
@@ -686,6 +708,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:label xml:lang="en">CheesyPizza</rdfs:label>
         <rdfs:label xml:lang="pt">PizzaComQueijo</rdfs:label>
         <skos:definition xml:lang="en">Any pizza that has at least 1 cheese topping.</skos:definition>
@@ -697,12 +720,28 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyVegetableTopping">
+        <owl:equivalentClass rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
         <rdfs:comment xml:lang="en">This class will be unsatisfiable. This is because we have given it 2 disjoint parents, which means it could never have any instances (as nothing can be both a CheeseTopping and a VegetableTopping). NB Called ProbeInconsistentTopping in the ProtegeOWL Tutorial.</rdfs:comment>
         <rdfs:label xml:lang="en">CheesyVegetableTopping</rdfs:label>
         <rdfs:label xml:lang="pt">CoberturaDeQueijoComVegetais</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Nothing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Nothing"/>
     
 
 
@@ -742,6 +781,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#DomainConcept"/>
         <rdfs:comment xml:lang="en">A class that is equivalent to the set of individuals that are described in the enumeration - ie Countries can only be either America, England, France, Germany or Italy and nothing else. Note that these individuals have been asserted to be allDifferent from each other.</rdfs:comment>
         <rdfs:label xml:lang="en">Country</rdfs:label>
         <rdfs:label xml:lang="pt">Pais</rdfs:label>
@@ -775,7 +815,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Fiorentina">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -885,6 +929,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#FourSeasons">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -959,6 +1006,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#FruitTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
         <rdfs:label xml:lang="pt">CoberturaDeFrutas</rdfs:label>
         <rdfs:label xml:lang="en">FruitTopping</rdfs:label>
         <skos:prefLabel xml:lang="en">Fruit</skos:prefLabel>
@@ -969,7 +1017,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#FruttiDiMare">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1031,7 +1081,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Giardiniera">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1168,6 +1222,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#HerbSpiceTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
         <rdfs:label xml:lang="pt">CoberturaDeErvas</rdfs:label>
         <rdfs:label xml:lang="en">HerbSpiceTopping</rdfs:label>
         <skos:prefLabel xml:lang="en">Herb Spice</skos:prefLabel>
@@ -1190,6 +1245,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#HotGreenPepperTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#GreenPepperTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
@@ -1207,6 +1263,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#HotSpicedBeefTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
@@ -1224,6 +1281,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#IceCream">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Food"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Nothing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1252,6 +1310,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:label xml:lang="en">InterestingPizza</rdfs:label>
         <rdfs:label xml:lang="pt">PizzaInteressante</rdfs:label>
         <skos:definition xml:lang="en">Any pizza that has at least 3 toppings. Note that this is a cardinality constraint on the hasTopping property and NOT a qualified cardinality constraint (QCR). A QCR would specify from which class the members in this relationship must be. eg has at least 3 toppings from PizzaTopping. This is currently not supported in OWL.</skos:definition>
@@ -1264,6 +1323,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PepperTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
@@ -1280,6 +1340,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#LaReine">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1356,7 +1419,10 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Margherita">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1416,6 +1482,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza"/>
         <rdfs:label xml:lang="en">MeatyPizza</rdfs:label>
         <rdfs:label xml:lang="pt">PizzaDeCarne</rdfs:label>
         <skos:definition xml:lang="en">Any pizza that has at least one meat topping</skos:definition>
@@ -1483,7 +1550,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mushroom">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1555,7 +1626,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Napoletana">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NonVegetarianPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1630,6 +1705,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <owl:disjointWith rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza"/>
         <rdfs:label xml:lang="en">NonVegetarianPizza</rdfs:label>
         <rdfs:label xml:lang="pt">PizzaNaoVegetariana</rdfs:label>
@@ -1643,6 +1719,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#NutTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
@@ -1710,6 +1787,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Parmense">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1898,7 +1978,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#PolloAdAstra">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -1982,7 +2067,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#PrinceCarlo">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -2041,7 +2130,10 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#QuattroFormaggi">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -2090,6 +2182,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#ThinAndCrispyPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasBase"/>
@@ -2135,7 +2228,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Rosa">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -2198,6 +2295,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
         <rdfs:label xml:lang="pt">CoberturaEmMolho</rdfs:label>
         <rdfs:label xml:lang="en">SauceTopping</rdfs:label>
         <skos:prefLabel xml:lang="en">Sauce</skos:prefLabel>
@@ -2208,6 +2306,9 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Siciliana">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2299,7 +2400,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#SloppyGiuseppe">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MeatyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -2358,7 +2464,11 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Soho">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -2445,6 +2555,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza">
+        <owl:equivalentClass rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizzaEquivalent"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2456,6 +2567,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:label xml:lang="pt">PizzaTemperada</rdfs:label>
         <rdfs:label xml:lang="en">SpicyPizza</rdfs:label>
         <skos:definition xml:lang="en">Any pizza that has a spicy topping is a SpicyPizza</skos:definition>
@@ -2488,6 +2600,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:comment xml:lang="en">An alternative definition for the SpicyPizza which does away with needing a definition of SpicyTopping and uses a slightly more complicated restriction: Pizzas that have at least one topping that is both a PizzaTopping and has spiciness hot are members of this class.</rdfs:comment>
         <rdfs:label xml:lang="pt">PizzaTemperadaEquivalente</rdfs:label>
         <rdfs:label xml:lang="en">SpicyPizzaEquivalent</rdfs:label>
@@ -2510,6 +2623,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
         <rdfs:label xml:lang="pt">CoberturaTemperada</rdfs:label>
         <rdfs:label xml:lang="en">SpicyTopping</rdfs:label>
         <skos:definition xml:lang="en">Any pizza topping that has spiciness Hot</skos:definition>
@@ -2611,6 +2725,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:label xml:lang="en">ThinAndCrispyPizza</rdfs:label>
         <skos:prefLabel xml:lang="en">Thin And Crispy Pizza</skos:prefLabel>
     </owl:Class>
@@ -2621,6 +2736,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#TobascoPepperSauce">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SauceTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyTopping"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
@@ -2654,6 +2770,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#UnclosedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2684,6 +2801,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetableTopping">
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
         <rdfs:label xml:lang="pt">CoberturaDeVegetais</rdfs:label>
         <rdfs:label xml:lang="en">VegetableTopping</rdfs:label>
         <skos:prefLabel xml:lang="en">Vegetable Topping</skos:prefLabel>
@@ -2717,6 +2835,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
         <rdfs:label xml:lang="pt">PizzaVegetariana</rdfs:label>
         <rdfs:label xml:lang="en">VegetarianPizza</rdfs:label>
         <skos:definition xml:lang="en">Any pizza that does not have fish topping and does not have meat topping is a VegetarianPizza. Note that instances of this class do not need to have any toppings at all.</skos:definition>
@@ -2728,6 +2847,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1 -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1">
+        <owl:equivalentClass rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2739,6 +2859,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza"/>
         <rdfs:comment xml:lang="en">Any pizza that only has vegetarian toppings or no toppings is a VegetarianPizzaEquiv1. Should be inferred to be equivalent to VegetarianPizzaEquiv2.  Not equivalent to VegetarianPizza because PizzaTopping is not covering</rdfs:comment>
         <rdfs:label xml:lang="pt">PizzaVegetarianaEquivalente1</rdfs:label>
         <rdfs:label xml:lang="en">VegetarianPizza1</rdfs:label>
@@ -2772,6 +2893,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza"/>
         <rdfs:comment xml:lang="en">An alternative to VegetarianPizzaEquiv1 that does not require a definition of VegetarianTopping. Perhaps more difficult to maintain. Not equivalent to VegetarianPizza</rdfs:comment>
         <rdfs:label xml:lang="pt">PizzaVegetarianaEquivalente2</rdfs:label>
         <rdfs:label xml:lang="en">VegetarianPizza2</rdfs:label>
@@ -2800,6 +2922,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PizzaTopping"/>
         <rdfs:comment xml:lang="en">An example of a covering axiom. VegetarianTopping is equivalent to the union of all toppings in the given axiom. VegetarianToppings can only be Cheese or Vegetable or....etc.</rdfs:comment>
         <rdfs:label xml:lang="pt">CoberturaVegetariana</rdfs:label>
         <rdfs:label xml:lang="en">VegetarianTopping</rdfs:label>
@@ -2811,7 +2934,12 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Veneziana">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#InterestingPizza"/>
         <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RealItalianPizza"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent1"/>
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizzaEquivalent2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
@@ -2898,13 +3026,15 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     
 
 
-	<!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#Taiwan -->
+    <!-- http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX -->
 
-    <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Taiwan">
+    <owl:Thing rdf:about="http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
+        <rdfs:label>Taiwan</rdfs:label>
     </owl:Thing>
     
+
 
     <!-- http://www.co-ode.org/ontologies/pizza#CT1 -->
 
@@ -2933,6 +3063,15 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     
 
 
+    <!-- http://www.co-ode.org/ontologies/pizza#ap1 -->
+
+    <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza#ap1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#American"/>
+    </owl:Thing>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/pizza#cheeset01 -->
 
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#cheeset01">
@@ -2956,7 +3095,7 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
         <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#CT1"/>
         <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#CT2"/>
         <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#CT3"/>
-		<rdfs:label>My Custom Pizza 3</rdfs:label>
+        <rdfs:label>My Custom Pizza 3</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2976,12 +3115,6 @@ v1.4. Added Food class (used in domain/range of hasIngredient), Added several ha
     <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#rockett01">
         <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.co-ode.org/ontologies/pizza#veggyp01 -->
-
-    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#veggyp01"/>
     
 
 
