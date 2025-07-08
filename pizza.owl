@@ -1,34 +1,37 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.co-ode.org/ontologies/pizza/pizza.owl#"
-     xml:base="http://www.co-ode.org/ontologies/pizza/pizza.owl"
-     xmlns:pizza="http://www.co-ode.org/ontologies/pizza/pizza.owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:terms="http://purl.org/dc/terms/"
+<rdf:RDF xmlns="http://www.co-ode.org/ontologies/pizza#"
+     xml:base="http://www.co-ode.org/ontologies/pizza"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:pizza="http://www.co-ode.org/ontologies/pizza/pizza.owl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://www.co-ode.org/ontologies/pizza">
         <owl:versionIRI rdf:resource="http://www.co-ode.org/ontologies/pizza/2.0.0"/>
+        <dc:description xml:lang="en">An ontology about pizzas and their toppings.
+
+This is an example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial).</dc:description>
         <dc:title xml:lang="en">pizza</dc:title>
+        <terms:contributor>Alan Rector</terms:contributor>
+        <terms:contributor>Chris Wroe</terms:contributor>
+        <terms:contributor>Matthew Horridge</terms:contributor>
         <terms:contributor>Nick Drummond</terms:contributor>
-        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pizza</rdfs:label>
+        <terms:contributor>Robert Stevens</terms:contributor>
+        <terms:license>Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
         <terms:provenance xml:lang="en">v2.0 Added new annotations to the ontology using standard/well-know annotation properties
 
 v1.5. Removed protege.owl import and references. Made ontology URI date-independent
 
 v1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional</terms:provenance>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</owl:versionInfo>
-        <terms:contributor>Alan Rector</terms:contributor>
-        <dc:description xml:lang="en">An ontology about pizzas and their toppings.
-
-This is an example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial).</dc:description>
-        <terms:contributor>Matthew Horridge</terms:contributor>
-        <terms:contributor>Chris Wroe</terms:contributor>
-        <terms:contributor>Robert Stevens</terms:contributor>
+        <rdfs:label>pizza</rdfs:label>
+        <owl:versionInfo>2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -71,6 +74,12 @@ This is an example ontology that contains all constructs required for the variou
     <!-- http://purl.org/dc/terms/provenance -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     
 
 
@@ -194,6 +203,74 @@ This is an example ontology that contains all constructs required for the variou
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7VKsJYsMUJyNAp4bQecDWS -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7VKsJYsMUJyNAp4bQecDWS">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
+        <rdfs:label>Stinky Tofu</rdfs:label>
+        <skos:prefLabel xml:lang="zh-tw">炸臭豆腐</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R9YMtvrNW4OWSWjRlFeSTyR -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9YMtvrNW4OWSWjRlFeSTyR">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasSpiciness"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Mild"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Taiwanese Kimchi</rdfs:label>
+        <skos:prefLabel xml:lang="zh-tw">台灣泡菜</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCDdxr8iTySUBlT1hYohS9C -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCDdxr8iTySUBlT1hYohS9C">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7VKsJYsMUJyNAp4bQecDWS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9YMtvrNW4OWSWjRlFeSTyR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasCountryOfOrigin"/>
+                <owl:hasValue rdf:resource="http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Golden Stinky Tofu Pizza</rdfs:label>
+        <skos:prefLabel>黃金臭豆腐比薩</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#ContainsDairyPizza -->
+
+    <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza#ContainsDairyPizza">
+        <rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
+    </owl:Class>
     
 
 
@@ -2584,7 +2661,7 @@ This is an example ontology that contains all constructs required for the variou
                 <owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An unclosed Pizza cannot be inferred to be either a VegetarianPizza or a NonVegetarianPizza, because it might have other toppings.</rdfs:comment>
+        <rdfs:comment>An unclosed Pizza cannot be inferred to be either a VegetarianPizza or a NonVegetarianPizza, because it might have other toppings.</rdfs:comment>
         <rdfs:label xml:lang="pt">PizzaAberta</rdfs:label>
         <rdfs:label xml:lang="en">UnclosedPizza</rdfs:label>
         <skos:prefLabel xml:lang="en">Unclosed Pizza</skos:prefLabel>
@@ -2595,7 +2672,7 @@ This is an example ontology that contains all constructs required for the variou
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition -->
 
     <owl:Class rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#ValuePartition">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ValuePartition is a pattern that describes a restricted set of classes from which a property can be associated. The parent class is used in restrictions, and the covering axiom means that only members of the subclasses may be used as values. The possible subclasses cannot be extended without updating the ValuePartition class.</rdfs:comment>
+        <rdfs:comment>A ValuePartition is a pattern that describes a restricted set of classes from which a property can be associated. The parent class is used in restrictions, and the covering axiom means that only members of the subclasses may be used as values. The possible subclasses cannot be extended without updating the ValuePartition class.</rdfs:comment>
         <rdfs:label xml:lang="pt">ValorDaParticao</rdfs:label>
         <rdfs:label xml:lang="en">ValuePartition</rdfs:label>
         <skos:prefLabel xml:lang="en">Value Partition</skos:prefLabel>
@@ -2821,6 +2898,104 @@ This is an example ontology that contains all constructs required for the variou
     
 
 
+    <!-- http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX -->
+
+    <owl:Thing rdf:about="http://webprotege.stanford.edu/RBhYEvsh2AIDtx0FCAwqLdX">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Country"/>
+        <rdfs:label>Taiwan</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#CT1 -->
+
+    <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza#CT1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#TomatoTopping"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#CT2 -->
+
+    <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza#CT2">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#MozzarellaTopping"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#CT3 -->
+
+    <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza#CT3">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#JalapenoPepperTopping"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#ap1 -->
+
+    <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza#ap1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#American"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#cheeset01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#cheeset01">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#cheesyp01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#cheesyp01">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseyPizza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#myPizza_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#myPizza_3">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
+        <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#CT1"/>
+        <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#CT2"/>
+        <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#CT3"/>
+        <rdfs:label>My Custom Pizza 3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#myPizza_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#myPizza_4">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
+        <pizza:hasTopping rdf:resource="http://www.co-ode.org/ontologies/pizza#rockett01"/>
+        <rdfs:label>My Custom Pizza 4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#rockett01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#rockett01">
+        <rdf:type rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/pizza#veggyp01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.co-ode.org/ontologies/pizza#veggyp01"/>
+    
+
+
     <!-- http://www.co-ode.org/ontologies/pizza/pizza.owl#America -->
 
     <owl:Thing rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#America">
@@ -2996,9 +3171,197 @@ This is an example ontology that contains all constructs required for the variou
             <rdf:Description rdf:about="http://www.co-ode.org/ontologies/pizza/pizza.owl#Italy"/>
         </owl:distinctMembers>
     </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/pizza#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.co-ode.org/ontologies/pizza#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>如果某Pizza是素食的（VegetarianPizza），且具有 CheeseTopping，則為含乳製品披薩</rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#VegetarianPizza"/>
+                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
+                                <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                                <swrl:argument2 rdf:resource="http://www.co-ode.org/ontologies/pizza#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#CheeseTopping"/>
+                                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza#ContainsDairyPizza"/>
+                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>某 Pizza 有 RocketTopping 或 PeperonataTopping，則是 SpicyPizza</rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
+                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
+                                <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                                <swrl:argument2 rdf:resource="http://www.co-ode.org/ontologies/pizza#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#PeperonataTopping"/>
+                                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
+                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>某 Pizza 有 RocketTopping 或 PeperonataTopping，則是 SpicyPizza</rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#Pizza"/>
+                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#hasTopping"/>
+                                <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                                <swrl:argument2 rdf:resource="http://www.co-ode.org/ontologies/pizza#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#RocketTopping"/>
+                                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.co-ode.org/ontologies/pizza/pizza.owl#SpicyPizza"/>
+                        <swrl:argument1 rdf:resource="http://www.co-ode.org/ontologies/pizza#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
 
