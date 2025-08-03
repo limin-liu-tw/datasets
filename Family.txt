@@ -7,7 +7,7 @@ married_direct(tony, coco).
 married_direct(phil, sara).
 married_direct(vito, ada).
 married_direct(toby, bess).
-married_direct(mike, jil).
+married_direct(mike, jill).
 married_direct(tom, kim).
 married_direct(nick, gina).
 
@@ -39,8 +39,8 @@ child_of(rita, mag).
 child_of(vito, jim).
 child_of(vito, mag).
 
-child_of(ada, jim).
-child_of(ada, mag).
+child_of(ada, roy).
+child_of(ada, nina).
 child_of(ryan, roy).
 child_of(ryan, nina).
 child_of(lisa, roy).
@@ -48,19 +48,19 @@ child_of(lisa, nina).
 child_of(toby, roy).
 child_of(toby, nina).
 
-child_of(jill, stan).
-child_of(jill, lora).
+child_of(jill, tony).
+child_of(jill, coco).
 child_of(liz, tony).
 child_of(liz, coco).
 child_of(peter, tony).
 child_of(peter, coco).
 child_of(tim, tony).
 child_of(tim, coco).
-child_of(tom, phil).
-child_of(tom, sara).
+child_of(tom, tony).
+child_of(tom, coco).
 
-child_of(kim, phil).
-child_of(kim, sara).
+child_of(kim, vito).
+child_of(kim, ada).
 child_of(dale, vito).
 child_of(dale, ada).
 child_of(ken, vito).
@@ -82,20 +82,21 @@ male(jay).
 male(jim).
 male(roy).
 male(stan).
+male(sam).
 male(tony).
-male(phil).
-male(vito).
-male(toby).
-male(mike).
-male(tom).
-male(nick).
 male(paul).
 male(mark).
+male(phil).
+male(vito).
 male(ryan).
+male(toby).
+male(mike).
 male(peter).
 male(tim).
-male(dale).
+male(tom).
 male(ken).
+male(nick).
+male(alan).
 male(max).
 
 female(elva).
@@ -103,20 +104,19 @@ female(zoe).
 female(mag).
 female(nina).
 female(lora).
-female(coco).
-female(sara).
-female(ada).
-female(bess).
-female(jil).
-female(kim).
-female(gina).
 female(tess).
-female(sam).
+female(coco).
 female(may).
+female(sara).
 female(rita).
+female(ada).
 female(lisa).
+female(bess).
 female(jill).
 female(liz).
+female(kim).
+female(dale).
+female(gina).
 female(anna).
 female(amy).
 
